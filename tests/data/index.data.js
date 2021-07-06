@@ -1,5 +1,5 @@
 module.exports = {
-  validHasExit: [
+  valid: [
     {
       maze: [
         ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
@@ -18,8 +18,6 @@ module.exports = {
         way: ['left', 'top', 'top', 'left', 'left', 'bottom', 'bottom', 'left'],
       },
     },
-  ],
-  validNoWayOut: [
     {
       maze: [
         ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
@@ -39,8 +37,7 @@ module.exports = {
       },
     },
   ],
-
-  invalid1: [
+  invalid: [
     {
       maze: [
         ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
@@ -54,19 +51,13 @@ module.exports = {
       ],
       start: { x: 4, y: '3' },
       end: { x: 0, y: 3 },
-      expectedResult: new Error(
-        'Start position has wrong format or corrd type: { x: number, y: number } needed',
-      ),
+      expectedResult: new Error('Start position has wrong format or corrd type: { x: number, y: number } needed'),
     },
-  ],
-  invalid2: [
     {
       maze: [],
       start: { x: 0, y: 3 },
       end: { x: 0, y: 3 },
-      expectedResult: new Error(
-        'Maze is not array or empty',
-      ),
+      expectedResult: new Error('Maze is not array or empty'),
     },
   ],
 };
